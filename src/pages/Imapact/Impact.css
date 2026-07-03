@@ -9,10 +9,8 @@
   --imapact-hero-padding-top: 10rem;
   --imapact-hero-padding-bottom: 3rem;
 
-  /* font-family */
   --font-family: "Manrope", sans-serif;
 
-  /* font-sizes */
   --imapct-h1-fs: 3.75rem;
   --imapct-h1-fw: 300;
   --impact-p-fs: 1.125rem;
@@ -25,17 +23,17 @@
     100% - var(--imapct-inline-padding) * 2
   );
   margin-inline: auto;
-  padding: var(--imapact-hero-padding-top) 0 var(--imapact-hero-padding-bottom);
+  padding: clamp(5rem, 8vw, 10rem) 0 clamp(2rem, 3vw, 3rem);
 }
 
 .impact_hero_con h1 {
-  font-size: var(--imapct-h1-fs);
+  font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: var(--imapct-h1-fw);
-  line-height: 72px;
+  line-height: 1.2;
 }
 
 .impact_gatheing_picture {
-  padding-block: 2em;
+  padding-block: clamp(1.5em, 3vw, 2em);
 }
 
 .impact_gatheing_picture img {
@@ -43,10 +41,10 @@
 }
 
 .impact_hero_con p {
-  font-size: var(--impact-p-fs);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: var(--impact-p-fw);
   font-family: var(--font-family);
-  line-height: 30.6px;
+  line-height: 1.6;
   letter-spacing: 0.26px;
 }
 
@@ -56,5 +54,20 @@
     100% - var(--imapct-inline-padding) * 2
   );
   margin-inline: auto;
-  padding-block: var(--imapact-hero-padding-bottom);
+  padding-block: clamp(2rem, 3vw, 3rem);
+}
+
+.impact_action h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: var(--imapct-h1-fw);
+}
+
+@media (max-width: 50em) {
+  .impact_hero_con h1 {
+    text-align: left;
+  }
+
+  .impact_hero_con p {
+    text-align: left;
+  }
 }

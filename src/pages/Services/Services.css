@@ -47,7 +47,7 @@
 }
 
 .hero_container {
-  padding-top: 10rem;
+  padding-top: clamp(5rem, 8vw, 10rem);
 }
 
 .even_container {
@@ -62,7 +62,7 @@
   font-weight: var(--font-weight200);
   text-align: center;
   text-transform: capitalize;
-  margin-bottom: 5rem;
+  margin-bottom: clamp(2rem, 4vw, 5rem);
 }
 
 .span1 {
@@ -75,13 +75,13 @@
 
 .fs_500 {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: var(--font-weight400);
+  font-weight: var(--font-weight300);
   text-align: center;
 }
 
 .fs_5001 {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-weight: var(--font-weight400);
+  font-weight: var(--font-weight300);
   text-align: center;
 }
 
@@ -155,6 +155,7 @@
 
 .gridbox p {
   color: var(--flex-fs-color);
+  font-weight: var(--font-weight300);
 }
 
 .zero_opacity {
@@ -172,8 +173,8 @@
 }
 
 .market_card {
-  width: 354px;
-  height: 277px;
+  flex: 1;
+  min-width: 0;
   padding: 2em;
   background-color: var(--flex-color);
 }
@@ -185,6 +186,7 @@
 
 .market_card p {
   color: var(--flex-fs-color);
+  font-weight: var(--font-weight300);
 }
 
 .odd_container {
@@ -206,7 +208,8 @@
 
 .work_grid.one {
   align-items: center;
-  width: 447px;
+  max-width: 447px;
+  width: 100%;
 }
 
 .work_grid.one h2 {
@@ -218,7 +221,8 @@
 .work_grid.two,
 .work_grid.three,
 .work_grid.four {
-  width: 258px;
+  max-width: 258px;
+  width: 100%;
   height: 427px;
   padding: 2.375rem 1.438rem;
 }
@@ -243,6 +247,7 @@
 
 .work_grid p {
   color: var(--flex-fs-color);
+  font-weight: var(--font-weight300);
 }
 footer {
   padding-block: 3em;
@@ -288,32 +293,31 @@ footer {
   text-transform: capitalize;
   position: relative;
   overflow: hidden;
-  transition: color 0.4s ease;
   cursor: pointer;
   z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .footer_button::before {
   content: "";
   position: absolute;
+  inset: 0;
   background-color: #ffffff;
-  top: 50%;
-  left: 50%;
-  width: 0%;
-  height: 0%;
-  transform: translate(-50%, -50%);
-  transition: width 0.4s ease, height 0.4s ease;
   z-index: 0;
-  border-radius: 50%;
+  border-radius: 100vmax;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s ease;
 }
 
 .footer_button:hover::before {
-  width: 300%;
-  height: 300%;
+  transform: scaleY(1);
 }
 
 .footer_button:hover {
   color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .footer_button span {
@@ -321,11 +325,51 @@ footer {
   z-index: 2;
 }
 
+@media (max-width: 64em) {
+  .grid_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "gridbox1 gridbox1"
+      "gridbox2 gridbox3"
+      "gridbox4 gridbox5";
+  }
+
+  .work_with_us_grid_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .work_grid.one {
+    grid-column: span 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .work_grid.two,
+  .work_grid.three,
+  .work_grid.four {
+    max-width: 100%;
+  }
+
+  .marketing_cards_container {
+    flex-wrap: wrap;
+  }
+
+  .market_card {
+    flex: 1 1 calc(50% - 0.5em);
+    min-width: 15rem;
+  }
+}
+
 @media (max-width: 50em) {
   .fs_800,
   .fs_500 {
     text-align: left;
   }
+
+  .hero_container {
+    padding-top: 5rem;
+  }
+
   .grid_container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -343,6 +387,11 @@ footer {
     height: auto;
   }
 
+  .market_card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
   .marketing_cards_container {
     flex-direction: column;
   }
@@ -354,9 +403,45 @@ footer {
   .work_grid.one {
     grid-column: span 1;
     width: 100%;
+    max-width: 100%;
   }
 
   .footer_width h1 {
     line-height: 1.2;
+  }
+}
+
+@media (max-width: 30em) {
+  .fs_800 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .fs_600 {
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
+  }
+
+  .gridbox h4 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding-bottom: 1.5em;
+  }
+
+  .market_card h4 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding-bottom: 1.5em;
+  }
+
+  .work_grid h3 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    padding-bottom: 2rem;
+  }
+
+  .footer_width h1 {
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+  }
+
+  .even_container,
+  .odd_container {
+    padding-block: 2rem;
   }
 }

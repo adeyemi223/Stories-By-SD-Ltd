@@ -39,13 +39,13 @@
 }
 
 .blog_text h1 {
-  font-size: 2.285rem;
+  font-size: clamp(1.5rem, 4vw, 2.285rem);
   font-weight: lighter;
   font-family: "Manrope", sans-serif;
 }
 
 .blog_text p {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: lighter;
   font-family: "Manrope", sans-serif;
 }
@@ -172,7 +172,7 @@
 }
 
 .blog_table span {
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 2vw, 0.75rem);
   font-family: "Manrope", sans-serif;
   font-weight: lighter;
   padding-bottom: 1em;
@@ -180,7 +180,7 @@
 }
 
 .blog_table p {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   padding-top: 1em;
@@ -209,7 +209,7 @@
   padding-bottom: 2.3em;
   font-family: "Manrope", sans-serif;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: #151515;
 }
 
@@ -219,7 +219,7 @@
 
 .blogPostBtn {
   margin-bottom: 5em;
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 2vw, 0.75rem);
   font-family: "Manrope", sans-serif;
   font-weight: 300;
   display: flex;
@@ -271,7 +271,7 @@
   gap: 2em;
 }
 .why_socials i {
-  font-size: 1.5em;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
 }
 
 .why_socials i:hover {
@@ -297,26 +297,26 @@
 }
 
 .exist h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-family: "Manrope", sans-serif;
   padding-bottom: 0.5em;
 }
 
 .exist p {
   padding-block: 1em;
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: lighter;
   font-family: "Manrope", sans-serif;
 }
 
 .offer h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-family: "Manrope", sans-serif;
   padding-block: 1em;
 }
 
 .offer p {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: lighter;
   padding-bottom: 1em;
   font-family: "Manrope", sans-serif;
@@ -346,6 +346,16 @@ ol li {
   font-weight: 600;
 }
 
+@media (max-width: 64em) {
+  .blogpost {
+    padding-top: 6rem;
+  }
+
+  .why_we_exist {
+    gap: 3em;
+  }
+}
+
 @media (max-width: 50em) {
   .blog_container {
     padding-top: 4em;
@@ -353,10 +363,6 @@ ol li {
 
   .blog_content {
     flex-direction: column;
-  }
-
-  .why_we_exist {
-    gap: 1.3em;
   }
 
   .blog_image {
@@ -370,5 +376,61 @@ ol li {
 
   .blog_content {
     gap: 2em;
+  }
+
+  .blogpost {
+    padding-top: 6.5rem;
+  }
+
+  .why_we_exist {
+    flex-direction: column;
+    height: auto;
+    gap: 2em;
+    padding-block: 2em;
+  }
+
+  .why_socials {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  .why_content {
+    max-width: 100%;
+    overflow-y: visible;
+  }
+
+  .blog_post_text_header h1 {
+    font-size: clamp(1.25rem, 5vw, 1.8rem);
+  }
+
+  .blogPostBtn {
+    margin-bottom: 2em;
+  }
+
+  ol {
+    padding-left: 2em;
+  }
+}
+
+@media (max-width: 30em) {
+  .blog_container {
+    padding-top: 3em;
+  }
+
+  .blog_content {
+    gap: 1em;
+    padding-block: 1em;
+  }
+
+  .blogpost {
+    padding-top: 5rem;
+  }
+
+  .why_we_exist {
+    gap: 1.5em;
+  }
+
+  ol {
+    padding-left: 1.5em;
   }
 }

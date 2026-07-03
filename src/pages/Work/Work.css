@@ -12,8 +12,8 @@
   --fs-600: 3rem;
   --fs-500: 1.5rem;
   --fs-450: 1rem;
-  --fs-400: 0.875rem;
-  --fs-300: 0.625rem;
+  --fs-400: clamp(0.75rem, 2vw, 0.875rem);
+  --fs-300: clamp(0.5rem, 1.5vw, 0.625rem);
 
   /* font-weight */
   --fw-300: 300;
@@ -110,7 +110,6 @@
 
 .work_profile_even_container h1 {
   font-size: clamp(1.9rem, 4vw, 3rem);
-  font-size: var(--fs-600);
   font-weight: var(--fw-300);
   text-align: center;
   padding-bottom: 1.3em;
@@ -149,6 +148,16 @@
   font-size: var(--fs-400);
 }
 
+@media (max-width: 64em) {
+  .work_grid_card {
+    height: 220px;
+  }
+
+  .work_even_container {
+    padding-top: 8rem;
+  }
+}
+
 @media (max-width: 50em) {
   .work_text p {
     text-align: left;
@@ -159,6 +168,33 @@
   }
 
   .work_even_container {
-    padding-top: 8rem;
+    padding-top: 6rem;
+  }
+
+  .work_grid_card {
+    height: 180px;
+  }
+
+  .work_grid_container {
+    padding-block: 3em;
+  }
+
+  .work_profile_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30em) {
+  .work_grid_card {
+    height: 140px;
+  }
+
+  .work_grid_container,
+  .work_profile_grid {
+    gap: 0.5em;
+  }
+
+  .work_profile {
+    padding: 1em;
   }
 }
