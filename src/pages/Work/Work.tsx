@@ -7,13 +7,13 @@ import Logo4 from "../../assets/images/Logo4.svg";
 import Logo5 from "../../assets/images/Logo5.svg";
 import Logo6 from "../../assets/images/Logo6.svg";
 import Logo7 from "../../assets/images/Logo7.svg";
-import Logo8 from "../../assets/images/Logo8.svg";
-import Profile1 from "../../assets/images/Profile1.svg";
-import Profile2 from "../../assets/images/Profile2.svg";
-import Profile3 from "../../assets/images/Profile3.svg";
-import Profile4 from "../../assets/images/Profile4.svg";
-import Profile5 from "../../assets/images/Profile5.svg";
-import Profile6 from "../../assets/images/Profile6.svg";
+import Logo8 from "../../assets/images/work_opt/work_logo8.png";
+import Profile1 from "../../assets/images/work_opt/work_profile1.png";
+import Profile2 from "../../assets/images/work_opt/work_profile2.png";
+import Profile3 from "../../assets/images/work_opt/work_profile3.png";
+import Profile4 from "../../assets/images/work_opt/work_profile4.jpeg";
+import Profile5 from "../../assets/images/work_opt/work_profile5.jpeg";
+import Profile6 from "../../assets/images/work_opt/work_profile6.jpeg";
 
 export default function Work() {
   return (
@@ -28,30 +28,30 @@ export default function Work() {
               </p>
             </div>
 
-            <div className="work_grid_container">
+              <div className="work_grid_container">
               <div className="work_grid_card color1">
-                <img src={Logo1} alt="" />
+                <img src={Logo1} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color2">
-                <img src={Logo2} alt="" />
+                <img src={Logo2} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color3">
-                <img src={Logo3} alt="" />
+                <img src={Logo3} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color4">
-                <img src={Logo4} alt="" />
+                <img src={Logo4} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color5">
-                <img src={Logo5} alt="" />
+                <img src={Logo5} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color6">
-                <img src={Logo6} alt="" />
+                <img src={Logo6} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color7">
-                <img src={Logo7} alt="" />
+                <img src={Logo7} alt="" loading="lazy" decoding="async" />
               </div>
               <div className="work_grid_card color8">
-                <img src={Logo8} alt="" />
+                <img src={Logo8} alt="" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function Work() {
             <div className="work_profile_grid">
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile1} alt="Profile" />
+                  <img src={Profile1} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Jessica Rich</h4>
                     <small>Vice President of Business Development</small>
@@ -81,7 +81,7 @@ export default function Work() {
               </div>
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile2} alt="Profile" />
+                  <img src={Profile2} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Anthony Underwood</h4>
                     <small>
@@ -103,7 +103,7 @@ export default function Work() {
               </div>
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile3} alt="Profile" />
+                  <img src={Profile3} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Francis Osifo</h4>
                     <small>Co-founder & CEO, Rayda</small>
@@ -122,7 +122,7 @@ export default function Work() {
               </div>
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile4} alt="Profile" />
+                  <img src={Profile4} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Dave taylor</h4>
                     <small>CEO - Total one logistics inc</small>
@@ -139,7 +139,7 @@ export default function Work() {
               </div>
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile5} alt="Profile" />
+                  <img src={Profile5} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Felicia Ajose</h4>
                     <small>Operations Manager, Amazon Pathways</small>
@@ -156,7 +156,7 @@ export default function Work() {
               </div>
               <div className="work_profile">
                 <div className="work_profile_text">
-                  <img src={Profile6} alt="Profile" />
+                  <img src={Profile6} alt="Profile" loading="lazy" decoding="async" />
                   <div className="work_text">
                     <h4>Gatumi Aliyu</h4>
                     <small>Co-founder /Chief Product Officer, Vendease</small>
